@@ -3,11 +3,15 @@ Stock options utility based on Python to scrap options data using TD Ameritrade 
 
 #Anupam Sharma - Feb 2020
 
+------------------------
 @stocks_data_pull.py
+------------------------
 Python app to fetch stocks list from file and then fetch each stock's current market price, 52 week high, low range to output file. 
 Stock data is fetched using TD Ameritrade's APIs based on my trading account.
 
+------------------------
 @options_chain_pull.py
+------------------------
 Python app to fetch & compute options data as per below processing steps and load to SQLITE3 (in-memory free license database) table:
 
 1. Fetch stocks list from file
@@ -17,8 +21,9 @@ Python app to fetch & compute options data as per below processing steps and loa
 5. Compute premiums from above loaded chain table and loads filtered dataset as needed for desired option trades
 6. Write final results from table and calculations to Excel spreadsheet.
 
-
+------------------------
 @options_excel_pull.py
+------------------------
 Python app to fetch options data for ER based stocks. For stock having results After market open of current trading day + Before market open of next trading day .
 1. Compute next trading day based on current day of week.
 2. Read stocks eligible for options trade from excel sheet.
